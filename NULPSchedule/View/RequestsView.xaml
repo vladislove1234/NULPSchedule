@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NULPSchedule.View.RequestsView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AddRequestCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <CollectionView
+            ItemsSource="{Binding Requests}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Редагувати"
+                               BackgroundColor="LightYellow"
+                               Command="{Binding EditRequestCommand}"
+                               CommandParameter="{Binding ID}"/>
+                     </SwipeItems>
+             </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems>
+                <SwipeItem Text="Видалити"
+                               BackgroundColor="LightPink"
+                               Command="{Binding DeleteRequestCommand}"
+                               CommandParameter="{Binding ID}"/>
+                </SwipeItems>
+            </SwipeView.RightItems>
+                <Frame
+                    CornerRadius="0"
+                    Margin="1"
+                    >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding ChooseRequestCommand}"
+                            CommandParameter="{Binding ID}"
+                            NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding Name}"/>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            Grid.Row="1">
+                            <Label
+                                Text="{Binding Description}"
+                                FontSize="Medium"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

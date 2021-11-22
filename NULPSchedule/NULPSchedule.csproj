@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.36" />
+    <PackageReference Include="Fizzler" Version="1.3.0" />
+    <PackageReference Include="Fizzler.Systems.HtmlAgilityPack" Version="1.2.1" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2083" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extras.CommonServiceLocator" Version="6.0.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.19" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Models\" />
+    <None Remove="Models\Interfaces\" />
+    <None Remove="Models\Mocks\" />
+    <None Remove="Models\Schedulemanagers\" />
+    <None Remove="Models\Enums\" />
+    <None Remove="HtmlAgilityPack" />
+    <None Remove="Fizzler" />
+    <None Remove="Fizzler.Systems.HtmlAgilityPack" />
+    <None Remove="View\" />
+    <None Remove="Xamarin.Forms.Maps" />
+    <None Remove="Xamarin.Forms.PancakeView" />
+    <None Remove="Resources\" />
+    <None Remove="Resources\Fonts\" />
+    <None Remove="Resources\Fonts\Montserrat.ttf" />
+    <None Remove="Autofac" />
+    <None Remove="Autofac.Extras.CommonServiceLocator" />
+    <None Remove="IoC\" />
+    <None Remove="Resources\Icons\" />
+    <None Remove="EntityFramework" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Interfaces\" />
+    <Folder Include="Models\Mocks\" />
+    <Folder Include="Models\Schedule_Managers\" />
+    <Folder Include="Models\Enums\" />
+    <Folder Include="View\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="IoC\" />
+    <Folder Include="Resources\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\Montserrat.ttf" />
+  </ItemGroup>
+</Project>
